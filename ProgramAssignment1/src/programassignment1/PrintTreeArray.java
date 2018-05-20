@@ -32,7 +32,10 @@ public class PrintTreeArray {
         int[] tempArray;
         int levelOn = node.mapTo.size();
         ArrayList<Node> currentLevel = treelist.get(levelOn);
+        
         int[] nums = java.util.stream.IntStream.rangeClosed(0, currentLevel.size()).toArray();
+        // From: https://alvinalexander.com/source-code/how-to-populate-initialize-java-int-array-range
+        
         int mapIter = 0;
         while(nums.length > 1){
             int leftOrRight = (int) map.get(mapIter);
