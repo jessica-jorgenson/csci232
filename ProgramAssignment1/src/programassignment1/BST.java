@@ -11,7 +11,7 @@ public class BST {
     public Node root;
     public int levels = 0;
     public ArrayList byLevel = new ArrayList();
-    public PrintTree theTree = new PrintTree();
+    public PrintTreeArray theTree = new PrintTreeArray();
 
     public void insert(int integer) {
         Node currentNode = new Node(integer);
