@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 
 public class Driver {
     
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Scanner fileInput = getFile();
         String line = fileInput.useDelimiter("\\Z").next();
         String[] strArray = line.split(",");
@@ -19,6 +19,17 @@ public class Driver {
         for (int i = 0; i < strArray.length; i++) {
             intArray[i] = Integer.parseInt(strArray[i]);
         }
+        
+        BST ourTree = new BST();
+        for(int number : intArray){
+            ourTree.insert(number);
+            ourTree.theTree.twoDtoString(); // my attempt at a text-based tree
+        }
+        ourTree.makeOrders();
+        ourTree.printOrders();
+        ourTree.delete(11);
+        ourTree.workingPrintTree();
+        
         
         
     }
