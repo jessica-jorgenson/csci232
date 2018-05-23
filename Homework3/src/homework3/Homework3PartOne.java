@@ -12,14 +12,14 @@ import java.util.logging.Logger;
  *
  * @author jorge
  */
-public class Homework3 implements Runnable{
+public class Homework3PartOne implements Runnable{
     
     int seconds;
     int count;
     String spacing = "";
     String category;
     
-    public Homework3(int sec){
+    public Homework3PartOne(int sec){
         seconds = sec;
         category = Integer.toString(seconds);
     }
@@ -38,13 +38,13 @@ public class Homework3 implements Runnable{
                 Thread.sleep(seconds * 1000);
                 System.out.println(spacing + count);
             } catch (InterruptedException ex) {
-                Logger.getLogger(Homework3.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Homework3PartOne.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
     public static void main(String[] args) {
-        Homework3 first = new Homework3(1);
-        Homework3 second = new Homework3(3);
+        Homework3PartOne first = new Homework3PartOne(1);
+        Homework3PartOne second = new Homework3PartOne(3);
         Thread t1 = new Thread(first);
         Thread t2 = new Thread(second);
         
